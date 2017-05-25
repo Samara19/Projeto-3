@@ -49,6 +49,7 @@ while jogo == 0:
     #criando textos
     tela_1 = ["Olá astronauta!", "Seja bem vindo(a) a Júpiter, o gigante do Sistema Solar!", "A minha gravidade é insana,", "então, prepare-se para flutuar por minha superfície!"]
     instructions = ["INSTRUÇÕES:", "A sua missão é atravessar a minha superífice", "sem encostar nas bordas superior e inferior da tela!", "Para isso, utilize a seta da esquerda para voltar para a sua nave!", "E a tecla de espaço para se manter flutuando, sem encostar nas bordas!", "Caso isso aconteça, GAME OVER!", "Está preparado(a)? Se sim, pressione ENTER para avançar e boa sorte!"]
+    ganhou = ["UOOOOOOOU", "É ISSO AÍ AMIGÃO/AMIGONA!", "VOCÊ CONSEGUIU ESCAPAR DO MEU CAMPO MAGNÉTICO MONSTRUOSO!", "E VOLTAR PARA A SEGURANÇA DA SUA NAVE!", "MISSÃO CUMPRIDA COM SUCESSO!"]
     perdeu = ["GAME OVER!"]
    #inserindo textos no display
     entrada = texto(tela_1,95, 20)
@@ -108,11 +109,20 @@ while jogo == 0:
                 jogo=2
             if rect_astronauta.top>390:
                 jogo=2
+            if rect_astronauta.left<-270:
+                jogo=3
 
         if jogo==2:
             screen.blit(astronauta, rect_astronauta)
             entrada = texto(perdeu,255, 320)
             entrada.novo_blit(fonte_perdeu, WHITE, screen, 0)
+            p.display.update()
+            time_passed = clock.tick(30)
+
+        if jogo==3:
+            screen.blit(astronauta, rect_astronauta)
+            entrada = texto(ganhou,50, 230)
+            entrada.novo_blit(fonte_jogo, WHITE, screen, 40)
             p.display.update()
             time_passed = clock.tick(30)
 
