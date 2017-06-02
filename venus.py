@@ -42,7 +42,7 @@ clock = p.time.Clock()
 p.font.init()
 
 fonte_padrao = p.font.get_default_font()
-fonte_jogo = p.font.SysFont(fonte_padrao, 30)
+fonte_jogo = p.font.SysFont(fonte_padrao, 35)
 fonte_ganhou = p.font.SysFont(fonte_padrao, 50)
 fonte_perdeu = p.font.SysFont(fonte_padrao, 100)
 fonte_novoperdeu = p.font.SysFont(fonte_padrao, 60)
@@ -69,7 +69,7 @@ while jogo == 0:
     screen.blit(primeira_tela, (0, 0)) #coloca a imagem no display
     screen.blit(astronauta, (astronauta_position))
     #criando textos
-    tela_1 = ["Olá, astronauta! Meu nome é Vênus...", "...e eu sou o planeta mais quente do Sistema Solar...", "...além de ser um dos astros mais brilhantes no céu noturno aí da Terra!", "Só perco para a Lua!", "Para conseguir passar por mim,", "sua primeira missão é acertar quem sou eu no céu noturno!", "Pressione ENTER para avançar!"] 
+    tela_1 = ["Olá, astronauta! Meu nome é Vênus...", "...e eu sou o planeta mais quente do Sistema Solar...", "...além de ser um dos astros mais brilhantes...", "...no céu noturno aí da Terra!", "Só perco para a Lua!", "Para conseguir passar por mim,", "sua primeira missão é acertar quem sou eu no céu noturno!", "Pressione ENTER para avançar!"] 
     tela_2 = ["INSTRUÇÕES", "Clique sobre o ponto no céu...,", "...o qual você acredita ser o planeta Vênus!"]
     ganhou = ["É ISSO AÍ AMIGÃO/AMIGONA!"] 
     ganhou1 = ["ESTE SOU EU MESMO!"]
@@ -82,13 +82,13 @@ while jogo == 0:
     perdeu3 = ["Foi por pouco!!! Este é o planeta Júpiter!"]
     perdeu3_continue = ["Que, às vezes, pode ser visto da Terra a olho nu!"]
     perdeu0 = ["GAME OVER!"]
-    tela_redirecionamento = ["Você venceu a primeira etapa do jogo!", "Para passar por mim, ainda tem de cumprir mais uma etapa!", "Guie o robô..."]
+    #tela_redirecionamento = ["Você venceu a primeira etapa do jogo!", "Para passar por mim, ainda tem de cumprir mais uma etapa!", "Guie o robô..."]
    
    #inserindo textos no display
-    entrada = texto(tela_1,95, 20)
-    entrada.novo_blit(fonte_jogo, WHITE, screen, 40)
+    entrada = texto(tela_1,120, 40)
+    entrada.novo_blit(fonte_jogo, WHITE, screen, 44)
     #p.draw.rect(screen, (150, 400, 100, 200))
-    entrada_2 = texto(tela_2, 95, 300)
+    entrada_2 = texto(tela_2, 120, 400)
     entrada_2.novo_blit(fonte_jogo, WHITE, screen, 60)
 
 
@@ -132,10 +132,11 @@ while jogo == 0:
                         p.time.delay(5000)
                         screen.fill(BLACK)
                         screen.blit(primeira_tela, (0, 0))
-                        entrada = texto(tela_redirecionamento,95, 20)
-                        entrada.novo_blit(fonte_jogo, WHITE, screen, 40)
+                        #entrada = texto(tela_redirecionamento,95, 20)
+                        #entrada.novo_blit(fonte_jogo, WHITE, screen, 40)
                         p.time.delay(3000)
-                        jogo = 1
+                        #jogo = 1
+                        p.display.quit()
                     elif 840+30>position[0]>840 and 248+30>position[1]>248:
                         entrada = texto(perdeu2,30, 100)
                         entrada.novo_blit(fonte_novoperdeu, WHITE, screen, 60)
