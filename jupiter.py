@@ -50,7 +50,7 @@ while jogo == 0:
     screen.blit(astronauta, (astronauta_position))
     #criando textos
     tela_1 = ["Olá astronauta!", "Seja bem vindo(a) a Júpiter, o gigante do Sistema Solar!", "A minha gravidade é insana,", "então, prepare-se para flutuar por minha superfície!"]
-    instructions = ["INSTRUÇÕES:", "A sua missão é atravessar a minha superfície!", "MAS NÃO ENCOSTE NAS BORDAS SUPERIOR OU INFERIOR DA TELA!", "Utilize                   para conseguir voltar para a sua nave!", "E                                                         para se manter flutuando!", "Está preparado(a)? Se sim, pressione ENTER para avançar e boa sorte!"]
+    instructions = ["INSTRUÇÕES:", "A sua missão é atravessar a minha superfície!", "MAS NÃO ENCOSTE NAS BORDAS SUPERIOR OU INFERIOR DA TELA!", "Utilize                   para conseguir voltar para a sua nave!", "E                                                         para se manter flutuando!", "ATENÇÃO: ACIMA DA LINHA VERMELHA, VOCÊ PODE PULAR MUITO ALTO!", "E ABAIXO, VOCÊ PODE NÃO CONSEGUIR SUBIR!", "Está preparado(a)? Se sim, pressione ENTER para avançar e boa sorte!"]
     ganhou = ["UOOOOOOOU", "É ISSO AÍ AMIGÃO/AMIGONA!", "VOCÊ CONSEGUIU ESCAPAR DO MEU CAMPO MAGNÉTICO MONSTRUOSO!", "E VOLTAR PARA A SEGURANÇA DA SUA NAVE!", "MISSÃO CUMPRIDA COM SUCESSO!"]
     perdeu = ["GAME OVER!"]
 
