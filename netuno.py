@@ -66,9 +66,55 @@ def nave_collided():
 collided = False
 contador = 0
 vida = 10
+vida = 10
+a = str(0)
+b = str(10)
 
 
-while True:
+x = 1
+y=True
+
+while y:
+    while x==1:
+        a = str(0)
+        b = str(10)
+        t1 = fonte_jogo.render('Diamantes:',1,(255,255,255))
+        t2 = fonte_jogo.render(a,1,(255,255,255))
+        t3 = fonte_jogo.render('Vida:',1,(255,255,255))
+        t4 = fonte_jogo.render(b,1,(255,255,255))
+        t5 = fonte_jogo.render('Olá Astronauta, você chegou em Netuno',1,(255,255,255))
+        t6 = fonte_jogo.render('o planeta com os ventos mais velozes do Sistema Solar! Aqui em Netuno chove diamante (de verdade).',1,(255,255,255))
+        t7 = fonte_jogo.render('Porém, nosso planeta tem muitas nuvens de amoníco, que fazem mal para o ser humano!',1,(255,255,255))
+        t8 = fonte_jogo.render('Tome cuidado ao andar por aí e pegue diamantes para a sua missão!',1,(255,255,255))
+        t9 = fonte_jogo.render('Use as setas para pegar diamantes e para desviar das nuvens! ',1,(255,255,255))
+        t10 = fonte_jogo.render('Seu objetivo é conseguir 25 diamantes para ir para a próxima missão...',1,(255,255,255))
+        t11 = fonte_jogo.render('Pressione espaço para continuar.',1,(255,255,255))
+        screen.blit(planeta, (0, 0))
+        screen.blit(t5, (100,50))
+        screen.blit(t6, (100,70))
+        screen.blit(t7, (100,90))
+        screen.blit(t8, (100,110))
+        screen.blit(t9, (100,130))
+        screen.blit(t10, (100,150))
+        screen.blit(t11, (100,170))
+        pygame.display.update()
+        time_passed = clock.tick(30)
+        events = pygame.event.get()
+        for event in events:
+            if event.type == pygame.KEYDOWN:
+                print('1')
+                if event.key == pygame.K_SPACE:
+                    screen.fill((0,0,0))
+                    screen.blit(planeta, (0, 0))
+                    a = str(0)
+                    b = str(10)
+                    screen.blit(t1,(750,40))
+                    screen.blit(t2,(750,60))
+                    screen.blit(t3,(900,40))
+                    screen.blit(t4,(900,60))      
+                y = 0
+
+while y ==0:
 
     if not ticks_to_diamante:
         ticks_to_diamante = 20
@@ -155,7 +201,7 @@ while True:
             time_passed = clock.tick(30)
             break
 
-        if contador >= 5:
+        if contador >= 25:
             screen.fill((0,0,0))
             screen.blit(planeta,(0,0))
             t6 = fonte_fim.render("Parábens, você venceu!",1,(255,255,255))
@@ -163,7 +209,6 @@ while True:
             pressed_keys = pygame.key.get_pressed()
             events = pygame.event.get()
             screen.blit(t6,(70,250))
-            screen.blit(t7,(320,350))
             pygame.display.update()
             time_passed = clock.tick(30)
             print('antes')
