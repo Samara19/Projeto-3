@@ -12,7 +12,7 @@ VERDE= (0,255,0)
 VERMELHO= (255,0,0)
 AZUL=(0,0,255)
 
-t1=["Olá astronauta!","Você deve levar um drone até o alto do monte olimpo!","Ele é um vulcã inativo de Marte,","maoir que o Everest","Seu drone esta funcionando mas seu controle remoto esta quebrado","para controla-lo será necessário apertar as setas de acordo"," com a sequência que será mostrada","Boa sorte viajante!"]
+t1=["Olá astronauta!","Você deve levar um drone até o alto do monte olimpo!","Ele é um vulcão inativo de Marte,","maior que o monte Everest da Terra!","Seu drone esta funcionando mas seu controle remoto esta quebrado","para controla-lo será necessário apertar as setas de acordo"," com a sequência que será mostrada","Boa sorte viajante!"]
 
 
 
@@ -24,14 +24,15 @@ screen=pygame.display.set_mode((1019, 600), 0, 32)
 pygame.display.set_caption('Space Trek')
 background_filename = 'vulcao.jpg'
 background = pygame.image.load(background_filename).convert()
+grade_filename = 'grade.png'
+grade = pygame.image.load(grade_filename).convert()
 ship_filename = 'drone3.png'
 ship = pygame.image.load(ship_filename).convert_alpha()
 ship_filenamedois = 'dronedois.png'
 shipdois = pygame.image.load(ship_filenamedois).convert_alpha()
 setas_nome='setas.png'
 setas = pygame.image.load(setas_nome).convert_alpha()
-grade_nome='grade.png'
-grade= pygame.image.load(grade_nome).convert_alpha()
+
 clock=pygame.time.Clock()
 vitoria=fonte2.render("Parabéns você venceu!",1000,PRETO)
 perda=fonte2.render("Você errou,vamos começar denovo!",1000,PRETO)
@@ -44,7 +45,7 @@ screen.blit(fundo2,(200,100))
 entrada_2 = texto(t1, 95, 50)
 entrada_2.novo_blit(fonte, BRANCO, screen, 60)
 pygame.display.update()
-pygame.time.wait(4000)
+pygame.time.wait(10000)
 
 
 while True:
@@ -54,6 +55,7 @@ while True:
     screen.blit(background,(0,0))
     screen.blit(ship,nave)
     screen.blit(setas, (0, 0))
+    screen.blit(grade,(0,0))
     pygame.display.update()
     time_passed=clock.tick(30)
     screen.fill(PRETO)
@@ -65,17 +67,15 @@ while True:
         screen.blit(background,(0,0))
         screen.blit(ship, nave )
         screen.blit(setas, (0, 0))
+        screen.blit(grade,(0,0))
         screen.blit(vitoria,(5,300))
         pygame.display.update()
         time_passed = clock.tick(60)
-        screen.blit((background),(0, 0))
-        screen.blit(ImagemNave,ultima_posicao)
-        screen.blit((texto_aviso),(400,400))
-        pygame.display.update()
-        contador=0
+      
         clock = pygame.time.Clock()
     if vit==2:
         screen.blit(background,(0,0))
+        screen.blit(grade,(0,0))
         screen.blit(ship, nave)
         screen.blit(setas, (0, 0))
         
@@ -112,7 +112,7 @@ while True:
         for i in repeticao:
             screen.fill(PRETO)
             screen.blit(background,(0,0))
-        
+            screen.blit(grade,(0,0))
             screen.blit(setas, (i))
             screen.blit(ship,nave)
             pygame.display.update()
@@ -128,11 +128,10 @@ while True:
                                     lista.append(sequencia[seta])
                                     screen.fill(PRETO)
                                     screen.blit(background,(0,0))
-                                 
+                                    screen.blit(grade,(0,0))
                                     screen.blit(setas, (i))
                                     nave=(k+10,l+2)
                                     screen.blit(ship,nave)
-                                    print(nave)
                                     j=0
                                     k=k+10
                                     l=l+2
@@ -145,8 +144,7 @@ while True:
                                     lista.append(0)
                                     screen.fill(PRETO)
                                     screen.blit(background,(0,0))
-                                    print(nave)
-                                  
+                                    screen.blit(grade,(0,0))
                                     screen.blit(setas, (i))
                                     screen.blit(ship, nave)
                                     nave=(k-2, l-2)
@@ -164,7 +162,7 @@ while True:
                                     lista.append(sequencia[seta])
                                     screen.fill(PRETO)
                                     screen.blit(background,(0,0))
-                                   
+                                    screen.blit(grade,(0,0))
                                     screen.blit(setas, (i))
                                     nave=(k+2,l-5)
                                     screen.blit(ship,nave)
@@ -180,6 +178,7 @@ while True:
                                 elif j==1 :
                                     screen.fill(PRETO)
                                     screen.blit(background,(0,0))
+                                    screen.blit(grade,(0,0))
                                     screen.blit(setas, (i))
                                     screen.blit(ship, nave)
                                     print(nave)
