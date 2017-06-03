@@ -98,7 +98,7 @@ while True:
         tecla=pygame.key.get_pressed()
         if event.type==KEYDOWN:
             if tecla[K_RETURN]:
-                from reinicia_tela import reinicia_tela
+               
                 if contador<4:
                     te=[textos11[contador]]
                     novos_textos=texto1(te,0,500)
@@ -358,7 +358,7 @@ while True:
                                             tecla=pygame.key.get_pressed()
                                             if event.type==KEYDOWN:
                                                 if tecla[K_RETURN]:
-                                                    from reinicia_tela import reinicia_tela
+                                                    
                                                     if contador<3:
                                                         te=[textosposnept[contador]]
                                                         novos_textos=texto1(te,0,500)
@@ -954,7 +954,7 @@ while True:
                                                                         tecla=pygame.key.get_pressed()
                                                                         if event.type==KEYDOWN:
                                                                             if tecla[K_RETURN]:
-                                                                                from reinicia_tela import reinicia_tela
+                                                                               
                                                                                 if contador<3:
                                                                                     te=[textosposurano[contador]]
                                                                                     novos_textos=texto1(te,0,500)
@@ -1206,7 +1206,7 @@ while True:
                                                                                                                     tecla=pygame.key.get_pressed()
                                                                                                                     if event.type==KEYDOWN:
                                                                                                                         if tecla[K_RETURN]:
-                                                                                                                            from reinicia_tela import reinicia_tela
+                                                                                                                           
                                                                                                                             if contador<3:
                                                                                                                                 te=[textospossaturno[contador]]
                                                                                                                                 novos_textos=texto1(te,0,500)
@@ -1464,7 +1464,7 @@ while True:
                                                                         tecla=pygame.key.get_pressed()
                                                                         if event.type==KEYDOWN:
                                                                             if tecla[K_RETURN]:
-                                                                                from reinicia_tela import reinicia_tela
+                                                                               
                                                                                 if contador<3:
                                                                                     te=[textosposurano[contador]]
                                                                                     novos_textos=texto1(te,0,500)
@@ -1693,7 +1693,7 @@ while True:
                                                                                                                     tecla=pygame.key.get_pressed()
                                                                                                                     if event.type==KEYDOWN:
                                                                                                                         if tecla[K_RETURN]:
-                                                                                                                            from reinicia_tela import reinicia_tela
+                                                                                                                           
                                                                                                                             if contador<3:
                                                                                                                                 te=[textospossaturno[contador]]
                                                                                                                                 novos_textos=texto1(te,0,500)
