@@ -72,9 +72,10 @@ b = str(10)
 
 
 x = 1
-y=True
+k=True
+y=0
 
-while y:
+while k:
     while x==1:
         a = str(0)
         b = str(10)
@@ -102,8 +103,9 @@ while y:
         events = pygame.event.get()
         for event in events:
             if event.type == pygame.KEYDOWN:
-                print('1')
+              
                 if event.key == pygame.K_SPACE:
+                    print('1')
                     screen.fill((0,0,0))
                     screen.blit(planeta, (0, 0))
                     a = str(0)
@@ -112,9 +114,11 @@ while y:
                     screen.blit(t2,(750,60))
                     screen.blit(t3,(900,40))
                     screen.blit(t4,(900,60))      
-                y = 0
+                k=False
+                x=0
+                y=0
 
-while y ==0:
+while y==0:
 
     if not ticks_to_diamante:
         ticks_to_diamante = 20
