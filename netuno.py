@@ -203,19 +203,23 @@ while y==0:
             screen.blit(t5,(90,250))
             pygame.display.update()
             time_passed = clock.tick(30)
+            pygame.time.wait(5000)
+            import jogo_integrado.py
             break
 
         if contador >= 25:
             screen.fill((0,0,0))
             screen.blit(planeta,(0,0))
             t6 = fonte_fim.render("Parábens, você venceu!",1,(255,255,255))
-            t7 = fonte_esc.render("Pressione esc para sair.",1,(255,255,255))
+            
             pressed_keys = pygame.key.get_pressed()
             events = pygame.event.get()
             screen.blit(t6,(70,250))
             pygame.display.update()
+            pygame.time.wait(5000)
             time_passed = clock.tick(30)
             print('antes')
+            import jogo_integrado.py
 
             while True:
                 for event in pygame.event.get():
