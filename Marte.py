@@ -71,8 +71,11 @@ while True:
         screen.blit(vitoria,(5,300))
         pygame.display.update()
         time_passed = clock.tick(60)
+        pygame.time.delay(3000)
+        import jogo_integrado.py
       
         clock = pygame.time.Clock()
+    
     if vit==2:
         screen.blit(background,(0,0))
         screen.blit(grade,(0,0))
@@ -84,6 +87,7 @@ while True:
         time_passed = clock.tick(60)
         pygame.time.wait(5000)
         o=True
+        import jogo_integrado.py
       
                                                 
                                 

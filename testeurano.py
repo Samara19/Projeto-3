@@ -110,7 +110,7 @@ while x == 0:
                 t10 = fonte_jogo.render('Os gases que você deseja misturar devem ser colocados no pote azul.',1,(0,0,0))
                 t11 = fonte_jogo.render('Os gases que não fazem parte da atmosfera de Urano devem ir para o lixo.',1,(0,0,0))    
                 t12 = fonte_jogo.render('As setas controlam o jogo.',1,(0,0,0))
-                t13 = fonte_jogo.render('Asperte a barra de espaço para continuar',1,(0,0,0))
+                t13 = fonte_jogo.render('Aperte a barra de espaço para continuar',1,(0,0,0))
                 screen.blit(t8, (100,100))
                 screen.blit(t9, (100,120))
                 screen.blit(t10, (100,140))
@@ -519,13 +519,13 @@ while x==7:
     if lista==listavence:
         print
         t1 = fonte_fim.render("Parábens, você venceu!",1,(255,0,0))
-        
     else:
         t1 = fonte_over.render("GAME OVER!",1,(255,0,0))
     screen.blit(t1,(70,240))
     pygame.display.update()
     time_passed = clock.tick(30)
-    break
+    pygame.time.delay(5000)
+    import jogo_integrado.py
 
 
 

@@ -23,6 +23,8 @@ fonte_jogo = p.font.SysFont(fonte_padrao, 25)
 fonte_fim = p.font.SysFont(fonte_padrao, 40)
 
 
+
+
 x = 0
 events = p.event.get()
 pressed_keys = p.key.get_pressed()
@@ -44,7 +46,7 @@ while x==0:
     
     t5 = fonte_jogo.render('Para continuar, responda a seguinte pergunta:',1,(255,255,255))
     t6 = fonte_jogo.render('Quantos planetas existem no Sistema Solar?(lembre-se que Plutão não é considerado planeta.)',1,(255,255,255))
-    t7 = fonte_jogo.render('Exite água em mercúrio?',1,(255,255,255))
+    t7 = fonte_jogo.render('Existe água em mercúrio?',1,(255,255,255))
     t8 = fonte_jogo.render('A atmosfera de Mercúrio permite a entrada de que objeto do espaço?',1,(255,255,255))
     t9 = fonte_jogo.render('1) 9 planetas, não, meteoros;',1,(255,255,255))
     t10 = fonte_jogo.render('2) 8 planetas, sim, astronautas;',1,(255,255,255))
@@ -178,6 +180,7 @@ while x==0:
                     screen.blit(t26, (25,300))
                     p.display.update()
                     time_passed = clock.tick(30)
+                    import jogo_integrado.py
         
 
 

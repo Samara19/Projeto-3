@@ -87,7 +87,7 @@ while jogo == 0:
    #inserindo textos no display
     entrada = texto(tela_1,120, 40)
     entrada.novo_blit(fonte_jogo, WHITE, screen, 44)
-    #p.draw.rect(screen, (150, 400, 100, 200))
+    #p.draw.rect(screen, WHITE, (150, 400, 100, 200))
     entrada_2 = texto(tela_2, 120, 400)
     entrada_2.novo_blit(fonte_jogo, WHITE, screen, 60)
 
@@ -130,13 +130,13 @@ while jogo == 0:
                         entrada = texto(ganhou4,290, 500)
                         entrada.novo_blit(fonte_ganhou, WHITE, screen, 40)
                         p.time.delay(5000)
-                        screen.fill(BLACK)
-                        screen.blit(primeira_tela, (0, 0))
+                        #screen.fill(BLACK)
+                        #screen.blit(primeira_tela, (0, 0))
                         #entrada = texto(tela_redirecionamento,95, 20)
                         #entrada.novo_blit(fonte_jogo, WHITE, screen, 40)
-                        p.time.delay(3000)
+                        #p.time.delay(3000)
                         #jogo = 1
-                        p.display.quit()
+                        import jogo_integrado.py
                     elif 840+30>position[0]>840 and 248+30>position[1]>248:
                         entrada = texto(perdeu2,30, 100)
                         entrada.novo_blit(fonte_novoperdeu, WHITE, screen, 60)
@@ -145,7 +145,7 @@ while jogo == 0:
                         entrada = texto(perdeu0,350, 350)
                         entrada.novo_blit(fonte_perdeu, WHITE, screen, 40)
                         p.time.delay(4000)
-                        p.display.quit()
+                        import jogo_integrado.py
                     elif 800+30>position[0]>800 and 348+30>position[1]>348:
                         entrada = texto(perdeu3,170, 100)
                         entrada.novo_blit(fonte_novoperdeu, WHITE, screen, 60)
@@ -154,14 +154,14 @@ while jogo == 0:
                         entrada = texto(perdeu0,350, 350)
                         entrada.novo_blit(fonte_perdeu, WHITE, screen, 40)
                         p.time.delay(4000)
-                        p.display.quit()
+                        import jogo_integrado.py
                     else:
                         entrada = texto(perdeu1,305, 200)
                         entrada.novo_blit(fonte_perdeu, WHITE, screen, 40)
                         entrada = texto(perdeu0,350, 300)
                         entrada.novo_blit(fonte_perdeu, WHITE, screen, 40)
                         p.time.delay(4000)
-                        p.display.quit()
+                        import jogo_integrado.py
 
                         
             

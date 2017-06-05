@@ -123,8 +123,8 @@ while jogo == 0:
             entrada.novo_blit(fonte_perdeu, WHITE, screen, 0)
             p.display.update()
             time_passed = clock.tick(30)
-            p.time.delay(3000)
-            p.display.quit()
+            p.time.delay(7000)
+            import jogo_integrado.py
 
         if jogo==3:
             screen.fill(BLACK)
@@ -132,8 +132,13 @@ while jogo == 0:
             screen.blit(astronauta, rect_astronauta)
             entrada = texto(ganhou,50, 230)
             entrada.novo_blit(fonte_jogo, WHITE, screen, 40)
-            p.display.update()
             time_passed = clock.tick(30)
+            p.time.delay(3000)
+            import jogo_integrado.py
+            
+            
+            
+            
 
 
 

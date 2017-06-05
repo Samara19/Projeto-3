@@ -183,30 +183,24 @@ while jogo == 0:
                     curio_title.novo_blit(fonte_perdeu, WHITE, screen, 50)
                     curio_1.novo_blit(fonte_curiosidades, WHITE, screen, 60)
                     jogo=1
+                    p.display.update()
+                    time_passed = clock.tick(30)
                 elif pergunta==2:
                     screen.blit(fundo_estrelado, (0, 0))
                     curio_title.novo_blit(fonte_perdeu, WHITE, screen, 50)
                     curio_2.novo_blit(fonte_curiosidades, WHITE, screen, 60)
                     jogo=2
+                    p.display.update()
+                    time_passed = clock.tick(30)
                 elif pergunta==3:
                     screen.blit(fundo_estrelado, (0, 0))
                     curio_title.novo_blit(fonte_perdeu, WHITE, screen, 50)
                     curio_3.novo_blit(fonte_curiosidades, WHITE, screen, 60)
                     p.time.delay(3000)
-                    if respostas_certas==3:
-                        p.display.quit()
-                        #screen.fill(BLACK)
-                        #screen.blit(background, (0,0))
-                        #screen.blit(astronauta, astronauta_position)
-                        #ganha.novo_blit(fonte_jogo, WHITE, screen, 40)
-                    else:
-                        screen.fill(BLACK)
-                        screen.blit(background, (0,0))
-                        screen.blit(astronauta, astronauta_position)
-                        perde.novo_blit(fonte_perdeu, WHITE, screen, 40)
-                        novamente.novo_blit(fonte_jogo, WHITE, screen, 40)
-                        novamente_2.novo_blit(fonte_jogo, WHITE, screen, 40)
-                        jogo=0
+                    jogo=5
+                    p.display.update()
+                    time_passed = clock.tick(30)
+                    
 
 
 
@@ -223,11 +217,15 @@ while jogo == 0:
                     curio_title.novo_blit(fonte_perdeu, WHITE, screen, 50)
                     curio_1.novo_blit(fonte_curiosidades, WHITE, screen, 60)
                     jogo=1
+                    p.display.update()
+                    time_passed = clock.tick(30)
                 elif pergunta==2:
                     screen.blit(fundo_estrelado, (0,0))
                     curio_title.novo_blit(fonte_perdeu, WHITE, screen, 50)
                     curio_2.novo_blit(fonte_curiosidades, WHITE, screen, 60)
                     jogo=2
+                    p.display.update()
+                    time_passed = clock.tick(30)
                 elif pergunta==3:
                     screen.blit(fundo_estrelado, (0,0))
                     curio_title.novo_blit(fonte_perdeu, WHITE, screen, 50)
@@ -240,6 +238,30 @@ while jogo == 0:
                     novamente.novo_blit(fonte_jogo, WHITE, screen, 40)
                     novamente_2.novo_blit(fonte_jogo, WHITE, screen, 40)
                     jogo=0
+                    p.display.update()
+                    time_passed = clock.tick(30)
+
+
+
+            if jogo==5:
+                if respostas_certas==3:
+                    screen.fill(BLACK)
+                    screen.blit(background, (0,0))
+                    screen.blit(astronauta, astronauta_position)
+                    ganha.novo_blit(fonte_jogo, WHITE, screen, 40)
+                    p.time.delay(5000)
+                    import jogo_integrado.py
+                else:
+                    screen.fill(BLACK)
+                    screen.blit(background, (0,0))
+                    screen.blit(astronauta, astronauta_position)
+                    perde.novo_blit(fonte_perdeu, WHITE, screen, 40)
+                    novamente.novo_blit(fonte_jogo, WHITE, screen, 40)
+                    novamente_2.novo_blit(fonte_jogo, WHITE, screen, 40)
+                    jogo=0
+
+                p.display.update()
+                time_passed = clock.tick(30)
 
 
 
